@@ -1,0 +1,100 @@
+@import "Mix.less";
+
+tbody, tfoot
+{
+	background:  @table-basic-color;
+}
+thead
+{
+	.border-top-left-radius(15px);
+	.border-top-right-radius(15px);
+}
+.table-bordered
+{
+	border-radius: 0;
+	border-color: darken(@table-basic-color, 20%); //#A9A9A9;
+	border-width: 0px 1px 1px 1px;
+	table-layout: fixed;
+}
+.table-bordered td
+{
+	border-color: darken(@table-basic-color, 20%);
+	padding: 10px;
+	font-weight:bold;
+}
+.table-bordered th {
+    border-left: 1px solid darken(@table-basic-color, 85%);
+    border-bottom: 1px solid darken(@table-basic-color, 85%);
+	border-top: none;
+	padding: 10px;
+	font-size: small;
+    font-weight: normal;
+	color: darken(@table-basic-color,20%);
+}
+.table-bordered tbody tr td:first-child,
+.table-bordered tfoot tr td:first-child
+{
+	background: #EEEDD7;
+	text-align: center;
+}
+.table-bordered input
+{
+	margin: 0;
+}
+thead tr
+{
+	background: none repeat scroll 0 0 darken(@table-basic-color, 70%);
+}
+thead tr th:first-child
+{
+	text-align: center;
+	width: 40px;
+}
+thead tr th:nth-child(2)
+{
+	width: 6%;
+}
+.head tr:last-child th:first-child
+{
+	text-align: center;
+}
+.head > tr > th > div
+{
+	min-width: 200px;
+}
+.head .btn
+{
+	font-weight:bold;
+}
+
+tbody tr td input,
+tfoot tr td input
+{
+	border: none !important;
+	width: 100%;
+	background: @table-basic-color;
+}
+.message
+{
+	position: relative;
+}
+.validationMessage
+{
+	bottom: 8px;
+    left: 0;
+    position: absolute;
+	background-color: #F2DEDE;
+    border-color: #EED3D7;
+    color: #B94A48;
+	border-radius: 4px 4px 4px 4px;
+    margin-bottom: 20px;
+    padding: 8px 35px 8px 14px;
+}
+.point
+{
+    display: block;
+    overflow: hidden;
+    text-align: justify;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
